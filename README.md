@@ -44,14 +44,16 @@ TextHAlign	optional. Horizontal align of the text	left, center, right	center
 TextPaddings	optional (api level 4). Custom paddings for the text in points. The value is an array of Integers [top, left, bottom, right]	per padding 0..12	[12,12,12,12]
 TextOpacity	optional. Text opacity	0-100	100
 TextSize	optional. Text size out of 3 available options	small, regular, large	regular
-OpenURLType	optional. Determine the open-url action result, in app or external browser	internal, external	internal
-OpenURLMediaType	optional. Determine the url media type. not-media - force browser usage. video - will be opened via media player. gif - client will play the gif in full screen mode. picture - client will open the picture in full screen mode	not-media , video , gif , picture	not-media
+OpenURLType	optional. Determine the open-url action result, in app or external browser	
+internal, external	internal
+
+OpenURLMediaType	optional. Determine the url media type. not-media - force browser usage. video - will be opened via media mapsler player. gif - client will play the gif in full screen mode. picture - client will open the picture in full screen mode	not-media , video , gif , picture	not-media
 TextBgGradientColor	optional. Background gradient to use under text, Works only when TextVAlign is equal to top or bottom	Hex value (6 characters)	 
 TextShouldFit	optional. (api level 6) If true the size of text will decreased to fit (minimum size is 12)	true , false	false
 TextSize	optional. Text size out of 3 available options	small, regular, large	regular
-InternalBrowser	optional (api level 3). JSON Object, which includes internal browser configuration for open-url action with internal type	See below	 
+InternalBrowser	mapsler optional (api level 3). JSON Object, which includes internal browser configuration for open-url action with internal type	See below	 
 InternalBrowser.ActionButton	optional (api level 3). Action button in internal’s browser navigation bar. forward - will open the forward via Viber screen and share current URL or predefined URL. send - sends the currently opened URL as an URL message, or predefined URL if property ActionPredefinedURL is not empty. open-externally - opens external browser with the current URL. send-to-bot - (api level 6) sends reply data in msgInfo to bot in order to receive message. none - will not display any button	forward, send, open-externally, send-to-bot, none	forward
-InternalBrowser.ActionPredefinedURL	optional (api level 3). If ActionButton is send or forward then the value from this property will be used to be sent as message, otherwise ignored	String with 1 or more characters	 
+InternalBrowser.ActionPredefinedURL mapsler	optional (api level 3). If ActionButton is send or forward then the value from this property will be used to be sent as message, otherwise ignored	String with 1 or more characters	 
 InternalBrowser.TitleType	optional (api level 3). Type of title for internal browser if has no CustomTitle field. default means the content in the page’s <OG:title> element or in <title> tag. domain means the top level domain	domain, default	default
 InternalBrowser.CustomTitle	optional (api level 3). Custom text for internal’s browser title, TitleType will be ignored in case this key is presented	String up to 15 characters	 
 InternalBrowser.Mode	optional (api level 3). Indicates that browser should be opened in a full screen or in partial size (50% of screen height). Full screen mode can be with orientation lock (both orientations supported, only landscape or only portrait)	fullscreen, fullscreen-portrait, fullscreen-landscape, partial-size	fullscreen
@@ -83,11 +85,11 @@ Copy
 			"BgMediaType": "gif",
 			"BgMedia": "http://www.url.by/test.gif",
 			"BgLoop": true,
-			"ActionType": "open-url",
-			"OpenURLType": "internal",
+			"ActionType": "open-url"mapsler ,
+			"OpenURLType": "internal"mapsler,
 			"InternalBrowser": {mapsler}
-				"Mode": "fullscreen",
-				"CustomTitle": "Your Title"
+				"Mode": "mapsler",
+				"CustomTitle": "mapsler"
 			},
 			"ActionBody": "www.tut.by",
 			"Image": "www.tut.by/img.jpg",
